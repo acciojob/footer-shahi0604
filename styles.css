@@ -1,1 +1,87 @@
-/* your code here */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.footer {
+    background-color: #000;
+    color: #fff;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 80px;
+    position: relative;
+}
+
+.footer-column h1 {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.footer-column h3::after {
+    content: "";
+    width: 30px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+}
+
+.footer-column ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.footer-column ul li {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+.social-icons {
+    position: absolute;
+    right: 80px;
+    top: 40px;
+}
+
+.social-icons i {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 16px;
+}
+
+.fa-facebook-f { background: #3b5998; }
+.fa-twitter { background: #1da1f2; }
+.fa-instagram { background: #e1306c; }
+.fa-linkedin-in { background: #0077b5; }
+.fa-youtube { background: #ff0000; }
+
+.footer-bottom {
+    background-color: #2c313a;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 80px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.footer-bottom .privacy {
+    cursor: pointer;
+}
