@@ -1,31 +1,35 @@
-/* your code here */
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
 
 .footer { background: #000; color: #fff; padding: 40px 8%; }
 
+/* Top row: logo left, icons right */
 .footer-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 40px;
 }
-
 .logo { font-size: 32px; font-weight: 500; }
 
 .social-links { display: flex; gap: 15px; }
 
+/* Icons */
 .media-icons {
   width: 40px; height: 40px; border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
   text-decoration: none; color: #fff; font-weight: bold;
 }
+.fb { background: #4267B2; }
+.tw { background: #1DA1F2; }
+.ig { background: #E1306C; }
+.li { background: #0077B5; }
+.yt { background: #FF0000; }
 
-/* Icon Colors */
-.fb { background: #4267B2; } .tw { background: #1DA1F2; } 
-.ig { background: #E1306C; } .li { background: #0077B5; } .yt { background: #FF0000; }
-
+/* 4 columns in a row */
 .footer-grid {
-  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
 }
 
 .footer-col h3 {
@@ -43,8 +47,11 @@
   display: flex; justify-content: space-between; color: #888; font-size: 14px;
 }
 
-/* Responsiveness */
-@media (max-width: 768px) {
+/* Responsive */
+@media (max-width: 900px) {
+  .footer-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
   .footer-top { flex-direction: column; gap: 20px; text-align: center; }
-  .footer-grid { flex-direction: column; text-align: left; }
+  .footer-grid { grid-template-columns: 1fr; }
 }
